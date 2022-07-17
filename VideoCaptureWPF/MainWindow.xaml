@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoCaptureWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DoorWatch" Height="450" Width="800"
+        WindowState="Maximized">
     <Grid>
-        <Image x:Name="FrameImage"></Image>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="DevicesComboBox" Grid.Row="0" Grid.Column="0" />
+        <TextBlock x:Name="FramesPerSecondLabel" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,4,0" />
+
+        <Image x:Name="FrameImage" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

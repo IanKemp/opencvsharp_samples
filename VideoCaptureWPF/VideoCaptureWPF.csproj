@@ -8,16 +8,17 @@
     <AssemblyName>VideoCaptureWPF</AssemblyName>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <None Include="haarcascade_frontalface_default.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  
+
   <ItemGroup>
-    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.6.0.20220608" />
+    <PackageReference Include="DirectShowLib.Standard" Version="2.1.0" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.6.0.20220608" />
     <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.6.0.20220608" />
   </ItemGroup>
-  
+
 </Project>
